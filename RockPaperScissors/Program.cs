@@ -18,7 +18,7 @@ namespace RockPaperScissors
 
             while (cont == true)
             {
-                string x;
+                string strChoice;
                 int choice;
                 int playerThrow = 0;
                 int aiThrow = 0;
@@ -26,12 +26,10 @@ namespace RockPaperScissors
                 AIPlayer p2 = new AIPlayer(ran);
                 RockyAI p3 = new RockyAI();
 
-
-
                 Console.WriteLine($"{name}, who would you like to play?\n1) Randominator\n2) Rambo\n");
-                x = Console.ReadLine();
+                strChoice = Console.ReadLine();
 
-                choice = Validator.CheckInts(x, 1, 2);
+                choice = Validator.CheckInts(strChoice, 1, 2);
 
                 if(choice == 1)
                 {
@@ -44,8 +42,9 @@ namespace RockPaperScissors
 
                 playerThrow = p1.SetRosh();
 
-                outcomes = score.Play(playerThrow, aiThrow, name, "AI");
+                int[] outcome = score.Play(playerThrow, aiThrow, name, "AI");
 
+                outcomes = outcomes.Zip(outcome, (x, y) => x + y).ToArray();
 
                 cont = Continue();
             }
