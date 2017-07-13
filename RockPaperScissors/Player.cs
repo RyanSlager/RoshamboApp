@@ -7,11 +7,17 @@ using System.Threading.Tasks;
 namespace RockPaperScissors
 {
     abstract class Player
-    {   
+    {
+        string name;
         public Player()
         {
         }
 
         public abstract int SetRosh();
+
+        public string GetName()
+        {
+            return name;
+        }
     }
 }

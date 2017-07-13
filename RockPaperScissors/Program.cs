@@ -12,6 +12,7 @@ namespace RockPaperScissors
         {
             HumanPlayer p1 = new HumanPlayer();
             string name = p1.GetName();
+            string p2Name = "";
             int[] outcomes = new int[2];
             ScoreBoard score = new ScoreBoard();
             bool cont = true;
@@ -23,8 +24,9 @@ namespace RockPaperScissors
                 int playerThrow = 0;
                 int aiThrow = 0;
                 Random ran = new Random();
-                AIPlayer p2 = new AIPlayer(ran);
-                RockyAI p3 = new RockyAI();
+                Player p2;
+                
+
 
                 Console.WriteLine($"{name}, who would you like to play?\n1) Randominator\n2) Rambo\n");
                 strChoice = Console.ReadLine();
@@ -33,11 +35,15 @@ namespace RockPaperScissors
 
                 if(choice == 1)
                 {
+                    p2 = new AIPlayer(ran);
+                    p2Name = p2.GetName();
                     aiThrow = p2.SetRosh();
                 }
                 else if(choice == 2)
                 {
-                    aiThrow = p3.SetRosh();
+                    p2 = new RockyAI();
+                    p2Name = p2.GetName();
+                    aiThrow = p2.SetRosh();
                 }
 
                 playerThrow = p1.SetRosh();
