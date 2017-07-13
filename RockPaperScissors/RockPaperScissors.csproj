@@ -43,7 +43,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AIPlayer.cs" />
-    <Compile Include="Apollo.cs" />
     <Compile Include="HumanPlayAI.cs" />
     <Compile Include="HumanPlayer.cs" />
     <Compile Include="Player.cs" />

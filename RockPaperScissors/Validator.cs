@@ -18,7 +18,7 @@ namespace RockPaperScissors
             int z;
             string y = x;
 
-            while (!Int32.TryParse(y, out z) && z >= min && z <= max)
+            while (!Int32.TryParse(y, out z) && z <= min || z >= max)
             {
                 Console.WriteLine("That is not a valid input, please enter a positive number\n");
                 y = Console.ReadLine();
