@@ -8,8 +8,6 @@ namespace RockPaperScissors
 {
     class ScoreBoard
     {
-        List<int> outcomes = new List<int>();
-
         public ScoreBoard()
         {
         }

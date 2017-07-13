@@ -33,7 +33,7 @@ namespace RockPaperScissors
 
             Console.WriteLine("Throw that roshambo, bro!\n1) Rock\n2) Paper\n3) Scissors");
             rawChoice = Console.ReadLine();
-            choice = Validator.CheckInts(rawChoice, 1, 4);
+            choice = Validator.CheckInts(rawChoice, 1, 3);
 
             return choice;
         }

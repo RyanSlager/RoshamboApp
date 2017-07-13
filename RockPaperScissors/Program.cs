@@ -29,7 +29,7 @@ namespace RockPaperScissors
                 Console.WriteLine($"{name}, who would you like to play?\n1) Randominator\n2) Rambo\n");
                 strChoice = Console.ReadLine();
 
-                choice = Validator.CheckInts(strChoice, 1, 3);
+                choice = Validator.CheckInts(strChoice, 1, 2);
 
                 if(choice == 1)
                 {
